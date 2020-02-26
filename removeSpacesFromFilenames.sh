@@ -2,7 +2,7 @@
 
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
-for i in $( ls ); do
+for i in ./*; do #for i in $( ls ); do
 JJ=`echo "$i" | sed "s/ /_/g"`
 if [ "$i" != "$JJ" ]; then
 mv "$i" "$JJ"
